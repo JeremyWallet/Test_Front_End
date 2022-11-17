@@ -1,0 +1,12 @@
+
+.main-heading {
+    display: flex;
+    text-align: center;
+    height: 64px;
+    background-color: #929292;
+    
+}
+.title {
+    margin: auto;
+    font-size: 1.5em;
+}
