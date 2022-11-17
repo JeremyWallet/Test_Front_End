@@ -3,7 +3,7 @@ import './card.css';
 
 
 const Card = () => (
-    <div className="card">
+    <div className="card" itemsPerRow={4}>
         <div className="card-header">
             <div className="checkbox-user"><input type="checkbox" id="checked-user" name="checked" value="user" /></div>
             <div className="card-image"><img src="https://avatars.githubusercontent.com/u/79349007?v=4" alt="Orange" /></div>
