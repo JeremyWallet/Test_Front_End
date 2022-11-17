@@ -15,10 +15,11 @@
 .search-bar::placeholder{
     color: black;
     font-size: 1em;
+    border: none;
 }
 
 
-
+/* Implementing responsive starting with mobile first */
 @media only screen and (max-width: 600px) {
     .search-bar {
         width: 40%;
@@ -53,10 +54,10 @@
 @media only screen and (min-width: 992px) {
     .search-bar {
         height: 60px;
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     .search-bar::placeholder{
-        font-size: 1.3em;
+        font-size: 1.2em;
     } 
 }
 
