@@ -1,18 +1,43 @@
+.checkbox-all {
+    margin: 50px 0px 0px 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-all input {
+    margin: 0;
+    width: 10px;
+}
+.checkbox-all label {
+    margin-left: 10px;
+}
+
+.icon-card {
+    margin-right: 110px;
+    display: flex;
+}
+
+.duplicate-icon{
+    margin-right: 10px;
+}
 .main-card {
-display: flex;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .card-main {
+    margin-top: 50px;
     width: 25%;
-    /* margin-left: 50px; */
     text-align: center;
 }
 
 .card {
     width: 100px;
+    max-height: 170px;
     text-align: center;
-    margin-top: 50px;
+    margin: auto;
     background-color: #D5D5D5;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgb(124, 122, 122); 
@@ -29,6 +54,7 @@ flex-wrap: wrap;
 .card-image img {
     width: 50px;
     margin: 10px 0;
+    border-radius: 50px;
 }
 
 .card-login,
@@ -48,17 +74,47 @@ flex-wrap: wrap;
 }
 
 /* For responsive design, I found that the sizes were correct without putting a lot of breakpoint */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
+
+    .card-main {
+        width: 50%;
+    }
     .card {
-        width: 70px;
         border-radius: 5px;
         box-shadow: 3px 3px 15px rgb(124, 122, 122); 
     }
 
     /* I use display to put the 2 elements below each other  */
-    .card-header {
+    /* .card-header {
         display:block;
+    } */
+
+    /* Purely by taste I preferred to put the element on the left */
+    .checkbox-user {
+        text-align: left;
     }
+
+
+    .card-login,
+    .card-id {
+        font-size: 0.7em;
+        margin-bottom: 5px;
+    }
+
+    .view-profile {
+        font-size: 0.5em;
+        width: 90%;
+        margin-bottom: 8px;
+        padding: 0.2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        border-radius: 5px;
+        box-shadow: 3px 3px 15px rgb(124, 122, 122); 
+    }
+
 
     /* Purely by taste I preferred to put the element on the left */
     .checkbox-user {
@@ -66,7 +122,7 @@ flex-wrap: wrap;
     }
 
     .card-image img {
-        width: 30px;
+        width: 50px;
         margin: 5px 0;
         padding: 0;
     }
@@ -83,6 +139,12 @@ flex-wrap: wrap;
         margin-bottom: 8px;
         padding: 0.2em;
     }
+}
+
+.no-result {
+    font-size: 1.3em;
+    margin-top: 20px;
+    color: rgba(13, 109, 109, 0.603);
 }
 
 
