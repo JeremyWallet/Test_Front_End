@@ -1,23 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Card from './Card';
 import './card.css';
 
-
-const Card = () => (
-    <div className="card" itemsPerRow={4}>
-        <div className="card-header">
-            <div className="checkbox-user"><input type="checkbox" id="checked-user" name="checked" value="user" /></div>
-            <div className="card-image"><img src="https://avatars.githubusercontent.com/u/79349007?v=4" alt="Orange" /></div>
-        </div>
-        <div className="card-id">
-            <h5>ID</h5>
-        </div>
-        <div className="card-login">
-            <h5>Login</h5>
-        </div>
-        <div className="card-view-profile">
-            <button className="view-profile">View profile</button>
-        </div>
+// Tableau de résultat reçu depuis App
+const ReposResults = ({ results }) => (
+    <div className="main-card" >
+        {/* Avec le map cela transforme chacun des objets en composant Card */}
+        {results.map((item) => (
+            <Card
+                // I use here the Spread Operator and in the Card file I will choose the information I am interested in
+                {...item}
+                key={item.id}
+            />
+        ))}
     </div>
 );
 
-export default Card;
+ReposResults.propTypes = {
+    results: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+        }),
+    ).isRequired,
+};
+
+export default ReposResults;
